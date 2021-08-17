@@ -1,0 +1,54 @@
+<div class="container form-container">
+    <form [formGroup]="addDetailForm">
+        <div *ngIf="displayFormErrorMsg" class="error">
+            <h5 *ngIf="!addDetailForm.valid">*Please fill the below mandatory fields with valid values</h5>
+        </div>
+        <div class="form-group">
+            <label for="name" class="label-head"> Name </label>
+            <input formControlName="name" class="form-control textbox" required/>
+            <div *ngIf="addDetailForm.get('name')?.invalid && (addDetailForm.get('name')?.dirty || addDetailForm.get('name')?.touched)" class="error">
+                Name is required
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <label for="email" class="label-head"> Email </label>
+            <input formControlName="email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" class="form-control textbox" required/> 
+            <div *ngIf="addDetailForm.get('email')?.invalid && (addDetailForm.get('email')?.dirty || addDetailForm.get('email')?.touched)" class="error">
+                Valid Email is required
+            </div>
+        </div>
+    
+        <div class="row phone">
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="name"  class="label-head"> Mobile </label>
+                    <input formControlName="mobile" pattern="^\d{10}$" class="form-control textbox-phone" required/>
+                    <div *ngIf="addDetailForm.get('mobile')?.invalid && (addDetailForm.get('mobile')?.dirty || addDetailForm.get('mobile')?.touched)" class="error">
+                        Valid Phone no is required
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="name" class="label-head"> Landline </label>
+                    <input formControlName="landline" class="form-control textbox-phone"/>
+                </div>
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <label for="name" class="label-head"> Website </label>
+            <input formControlName="website" class="form-control textbox"/>
+        </div>
+    
+        <div class="form-group">
+            <label for="name" class="label-head"> Address </label>
+            <textarea formControlName="address" rows="4" class="form-control textbox"></textarea>
+        </div>
+
+        <div class="btn-container">
+            <button class="btn btn-success" (click)="displayFormErrorMsg = true" type="submit">Add</button>
+        </div>
+    </form>    
+</div>
