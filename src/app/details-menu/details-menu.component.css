@@ -1,0 +1,23 @@
+.body-container{
+    padding: 30px 20px;
+}
+.menu-head{
+    margin: 5px 0 25px 0;
+}
+.detail-container{
+    border: #d1d1d1;
+    border-style: solid;
+    border-width: thin;
+    padding: 2px 0 10px 20px;
+}
+.contact-details{
+    margin: 0;
+}
+.contact-name{
+    margin: 0;
+    font-size: 32px;
+    font-weight: 300;
+}
+.selected{
+    background-color: #cee7f2;
+}

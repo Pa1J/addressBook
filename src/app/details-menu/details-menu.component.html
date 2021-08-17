@@ -1,0 +1,6 @@
+<h5 class="menu-head">CONTACTS</h5>
+<div *ngFor="let detail of details" class="detail-container" [class.selected]="detail === selectedDetail" (click)="onMenuSelect(detail)">
+    <h5 class="contact-name">{{detail.name}}</h5>
+    <p class="contact-details">{{detail.email}}</p>
+    <p class="contact-details">{{detail.phoneno}}</p>
+</div>
