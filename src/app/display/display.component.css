@@ -1,0 +1,36 @@
+.details-display{
+    margin: 50px 75px;
+}
+.heading{
+    display: flex;
+    flex-direction: row;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+}
+.icons-item{
+    display: flex;
+    flex-direction: row;
+    margin: 0 15px;
+}
+.icon-edit{
+    width: 20px;
+    height: 20px;
+}
+.icon-delete{
+    width: 20px;
+    height: 25px;
+    margin-bottom: 5px;
+}
+.contact-name{
+    width: 50%;
+}
+.mobile{
+    margin: 0;
+}
+.link{
+    text-decoration: none;
+    color: #000;
+}

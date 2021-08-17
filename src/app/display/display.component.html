@@ -1,0 +1,23 @@
+<div *ngIf="detail" class="details-display">
+    <div class="heading">
+        <h2 class="contact-name">{{detail.name}}</h2>
+        <div class="icons">
+            <div (click)="edit()" class="icons-item">
+                <p><img src="assets/edit1.jpg" class="icon-edit"> EDIT</p>
+            </div>
+            <div class="icons-item">
+                <p><img src="assets/delete1.png" class="icon-delete"> DELETE</p>
+            </div>
+        </div>
+    </div>
+    <p>Email: <a class="link" href="#">{{detail.email}}</a></p>
+    <div>
+        <p class="mobile">Mobile: {{detail.phoneno}}</p>
+        <p>Landline: {{detail.landline}}</p>
+    </div>
+    <p>Website: <a class="link" href="#">{{detail.website}}</a></p>
+    <div class="row">
+        <p class="col-1">Address: </p>
+        <p class="col-3">{{detail.address}}</p>
+    </div>
+</div>
